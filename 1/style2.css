@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+.clump {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  transition: transform 0.5s, opacity 0.5s;
+  border-radius: 50%;
+}
