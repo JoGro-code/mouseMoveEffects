@@ -1108,6 +1108,19 @@
             e.addEventListener("mousemove", function () {
               (a[0].down = !0), (a[0].color = L());
             }),
+            e.addEventListener("touchmove", function (e) {
+              e.preventDefault(); // Verhindert das Standard-Scrollen auf Touch-Geräten
+              var touch = e.touches[0];
+              // Umrechnung der Touch-Koordinaten
+              a[0].moved = a[0].down;
+              a[0].dx = 5 * (touch.clientX - a[0].x);
+              a[0].dy = 5 * (touch.clientY - a[0].y);
+              a[0].x = touch.clientX;
+              a[0].y = touch.clientY;
+            }),
+            e.addEventListener("touchmove", function () {
+              (a[0].down = !0), (a[0].color = L());
+            }),
             window.addEventListener("mouseup", function () {
               a[0].down = !1;
             }),
