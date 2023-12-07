@@ -5,6 +5,6 @@ const myFluid = new Fluid(canvas);
 
 myFluid.activate();
 
-document.addEventListener("DOMContentLoaded", () => {
-  myFluid.activate();
-});
+//document.addEventListener("DOMContentLoaded", () => {
+//  myFluid.activate();
+//});
